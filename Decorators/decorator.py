@@ -33,7 +33,6 @@ def repeat(num_times):
     return repeat_decorator
 
 
-# Using multiple decorators for the same function
 @repeat(num_times=3)
 def greet(name: str):
     print(f"Hello: {name}")
@@ -53,6 +52,7 @@ def debug(func):
     return wrapper
 
 
+# Using multiple decorators for the same function
 @debug
 @start_end_decorator
 def say_hello(name: str):
